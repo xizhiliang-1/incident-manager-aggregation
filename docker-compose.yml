@@ -3,12 +3,12 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ../incident-manager  # 替换为 Spring Boot 项目的路径
+      context: ../incident-manager-backend  # from backend 
     ports:
       - "8080:8080"
 
   frontend:
     build:
-      context: ../incident-manager-frontend  # 替换为 React 项目的路径
+      context: ../incident-manager-frontend  # from frontend 
     ports:
-      - "3000:80"  # 将 Nginx 的 80 端口映射到主机的 3000 端口
+      - "3000:80"  # Nginx 80 port match to host 3000 port
